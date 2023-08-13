@@ -5,8 +5,16 @@ import com.theZ.dotoring.app.chat.entity.ChatMessage;
 import com.theZ.dotoring.app.chat.repository.MessageRepository;
 import com.theZ.dotoring.app.chatRoom.entity.ChatRoom;
 import com.theZ.dotoring.app.chatRoom.repository.ChatRoomRespository;
+import com.theZ.dotoring.app.letter.domain.Letter;
+import com.theZ.dotoring.app.letter.dto.LetterByMemberResponseDTO;
+import com.theZ.dotoring.app.letter.mapper.LetterMapper;
+import com.theZ.dotoring.common.MessageCode;
+import com.theZ.dotoring.exception.NotFoundLetterException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -29,8 +37,10 @@ public class ChatRoomService {
     }
 
     @Transactional
-    public List<ChatMessage> findMessageByRoom(String roomName){
+    public Slice<ChatMessage> findMessageByRoom(String roomName, Pageable pageable){
 
-        return messageRepository.findByRoomName(roomName);
+        List<ChatMessage> messages = messageRepository.findByRoomNameOrderByCreatedAtDesc(roomName, pageable).toList();
+
+        return new PageImpl<>(messages, pageable, messages.size());
     }
 }

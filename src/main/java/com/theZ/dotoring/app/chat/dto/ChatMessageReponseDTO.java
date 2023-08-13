@@ -5,6 +5,7 @@ import com.theZ.dotoring.app.chatRoom.dto.ChatRoomResponseDTO;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.domain.Slice;
 
 import java.time.LocalDateTime;
 import java.util.List;

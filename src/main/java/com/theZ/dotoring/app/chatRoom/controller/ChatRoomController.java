@@ -2,6 +2,7 @@ package com.theZ.dotoring.app.chatRoom.controller;
 
 import com.theZ.dotoring.app.auth.MemberDetails;
 import com.theZ.dotoring.app.chat.dto.ChatMessageReponseDTO;
+import com.theZ.dotoring.app.chat.dto.ChatMessageResponsePageDTO;
 import com.theZ.dotoring.app.chat.entity.ChatMessage;
 import com.theZ.dotoring.app.chatRoom.dto.ChatRoomResponseDTO;
 import com.theZ.dotoring.app.chatRoom.entity.ChatRoom;
@@ -9,6 +10,8 @@ import com.theZ.dotoring.app.chatRoom.service.ChatRoomService;
 import com.theZ.dotoring.common.ApiResponse;
 import com.theZ.dotoring.common.ApiResponseGenerator;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Slice;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -35,10 +38,12 @@ public class ChatRoomController {
 
     // 특정 roomName의 Message들 반환
     @GetMapping("/rooms/{roomName}")
-    public ApiResponse<ApiResponse.CustomBody<ChatMessageReponseDTO>> findMessageByRoom(@PathVariable("roomName") String roomName){
+    public ApiResponse<ApiResponse.CustomBody<Slice<ChatMessageResponsePageDTO>>> findMessageByRoom(@PathVariable("roomName") String roomName, Pageable pageable){
 
-        List<ChatMessage> chatMessages = chatRoomService.findMessageByRoom(roomName);
+        Slice<ChatMessage> chatMessages = chatRoomService.findMessageByRoom(roomName, pageable);
 
-        return ApiResponseGenerator.success(new ChatMessageReponseDTO(chatMessages), HttpStatus.OK);
+        Slice<ChatMessageResponsePageDTO> pageDTOSlice = chatMessages.map(ChatMessageResponsePageDTO::new);
+
+        return ApiResponseGenerator.success(pageDTOSlice, HttpStatus.OK);
     }
 }
