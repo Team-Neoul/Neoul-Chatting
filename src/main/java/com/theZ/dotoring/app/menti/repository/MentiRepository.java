@@ -9,4 +9,7 @@ import java.util.Optional;
 public interface MentiRepository extends JpaRepository<Menti,Long> {
 
     Optional<Menti> findByEmail(String email);
+
+    Optional<Menti> findByNickname(String nickName);
+
 }

@@ -37,6 +37,8 @@ public class QMento extends EntityPathBase<Mento> {
     //inherited
     public final StringPath email = _super.email;
 
+    public final StringPath firebaseToken = createString("firebaseToken");
+
     //inherited
     public final NumberPath<Long> id = _super.id;
 

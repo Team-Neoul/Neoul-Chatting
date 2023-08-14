@@ -29,6 +29,8 @@ public class Mento extends Member {
     @Size(min = 1, max = 300)
     private String mentoringSystem;
 
+    private final String firebaseToken = "testing";
+
     public Mento(String loginId) {
         super(loginId);
     }

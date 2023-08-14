@@ -33,6 +33,8 @@ public class QMenti extends EntityPathBase<Menti> {
     //inherited
     public final StringPath email = _super.email;
 
+    public final StringPath firebaseToken = createString("firebaseToken");
+
     public final NumberPath<Long> grade = createNumber("grade", Long.class);
 
     //inherited

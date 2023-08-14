@@ -103,7 +103,7 @@ public class MessageService {
         return roomRepository.save(chatRoom);
     }
 
-    private ChatRoom findRoom(String roomName) {
+    public ChatRoom findRoom(String roomName) {
         Optional<ChatRoom> room = roomRepository.findByRoomName(roomName);
 
         return room.orElse(null);

@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface MentoRepository extends JpaRepository<Mento,Long> {
 
     Optional<Mento> findByEmail(String email);
+
+    Optional<Mento> findByNickname(String nickName);
 }

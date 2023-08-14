@@ -30,6 +30,8 @@ public class Menti extends Member {
     @Size(min = 1, max = 300)
     private String preferredMentoring;
 
+    private final String firebaseToken = "testing";
+
     @Builder
     public Menti(String loginId, String password, String email, String nickname, String introduction, String profileImage, Status status, Job job, Major major, List<Certification> certifications, String school, Long grade, String preferredMentoring) {
         super(loginId, password, email, nickname, introduction, profileImage,"I" , status,job,major,certifications, UserRole.ROLE_MENTI);

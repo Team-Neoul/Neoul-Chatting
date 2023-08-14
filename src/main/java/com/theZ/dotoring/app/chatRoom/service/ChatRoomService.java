@@ -8,6 +8,8 @@ import com.theZ.dotoring.app.chatRoom.repository.ChatRoomRespository;
 import com.theZ.dotoring.app.letter.domain.Letter;
 import com.theZ.dotoring.app.letter.dto.LetterByMemberResponseDTO;
 import com.theZ.dotoring.app.letter.mapper.LetterMapper;
+import com.theZ.dotoring.app.menti.repository.MentiRepository;
+import com.theZ.dotoring.app.mento.repository.MentoRepository;
 import com.theZ.dotoring.common.MessageCode;
 import com.theZ.dotoring.exception.NotFoundLetterException;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +31,18 @@ public class ChatRoomService {
     private final ChatRoomRespository chatRoomRespository;
 
     private final MessageRepository messageRepository;
+
+    @Transactional
+    public List<String> findVisitedNames(String roomName){
+
+        Optional<ChatRoom> chatRoom = chatRoomRespository.findByRoomName(roomName);
+
+        if (chatRoom.isEmpty()) {
+            throw new RuntimeException();
+        }
+
+        return chatRoom.get().getVisitedNames();
+    }
 
     @Transactional
     public List<ChatRoom> findAllRooms(MemberDetails memberDetails){

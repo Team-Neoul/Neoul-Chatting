@@ -58,6 +58,10 @@ dependencies {
 	// socket
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 
+	// fcm
+	implementation 'com.google.firebase:firebase-admin:9.1.1'
+	implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
 }
 
 test {

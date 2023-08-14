@@ -5,10 +5,7 @@ import com.theZ.dotoring.app.commonModel.CommonEntity;
 import com.theZ.dotoring.enums.Job;
 import com.theZ.dotoring.enums.Major;
 import com.theZ.dotoring.enums.Status;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
