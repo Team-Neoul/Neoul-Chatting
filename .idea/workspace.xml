@@ -5,93 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d6b80c4-23ed-4e96-bf33-95eb03a20ef5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/chatRoom/service/ChatRoomService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/chatRoom/service/ChatRoomService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/controller/LetterFromMentiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/controller/LetterFromMentoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/domain/Letter$LetterBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/domain/Letter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/domain/QLetter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LetterByMemberRequestDTO$LetterByMemberRequestDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LetterByMemberRequestDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LetterByMemberResponseDTO$LetterByMemberResponseDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LetterByMemberResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LettersAndMemberDTO$LettersAndMemberDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/dto/LettersAndMemberDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/menti/CreateLetterByMentiHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/menti/CreateMentiLetterByRoomHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/menti/GetMentiLetterByRoomHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/menti/GetRoomByMentiHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/mento/CreateLetterByMentoHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/mento/CreateMentoLetterByRoomHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/mento/GetMentoLetterByRoomHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/handler/mento/GetRoomByMentoHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/mapper/LetterMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/mapper/LetterMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/repository/LetterRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/service/LetterMentiService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/letter/service/LetterMentoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/domain/QRoom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/domain/Room$RoomBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/domain/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/dto/RoomResponseDTO$RoomResponseDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/dto/RoomResponseDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/mapper/RoomMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/mapper/RoomMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/repository/RoomQueryRepositoryCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/repository/RoomQueryRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/repository/RoomRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/app/room/service/RoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/theZ/dotoring/common/DataInit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/'querydsl'/com/theZ/dotoring/app/letter/domain/QLetter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/'querydsl'/com/theZ/dotoring/app/room/domain/QRoom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/theZ/dotoring/app/letter/mapper/LetterMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/theZ/dotoring/app/room/mapper/RoomMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MessageController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/chatRoom/service/ChatRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/chatRoom/service/ChatRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/controller/LetterFromMentiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/controller/LetterFromMentoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/domain/Letter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/dto/LetterByMemberRequestDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/dto/LetterByMemberResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/dto/LettersAndMemberDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/menti/CreateLetterByMentiHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/menti/CreateMentiLetterByRoomHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/menti/GetMentiLetterByRoomHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/menti/GetRoomByMentiHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/mento/CreateLetterByMentoHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/mento/CreateMentoLetterByRoomHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/mento/GetMentoLetterByRoomHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/handler/mento/GetRoomByMentoHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/mapper/LetterMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/repository/LetterRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/service/LetterMentiService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/letter/service/LetterMentoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/domain/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/dto/RoomResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/mapper/RoomMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/repository/RoomQueryRepositoryCustom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/repository/RoomQueryRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/repository/RoomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/room/service/RoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/common/DataInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/theZ/dotoring/room/repository/RoomRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/theZ/dotoring/room/repository/RoomRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/chatRoom/dto/ChatRoomResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/theZ/dotoring/app/chatRoom/dto/ChatRoomResponseDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +73,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/iseung-geon/Dotoring-BE&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -279,6 +194,8 @@
       <workItem from="1693354746646" duration="3367000" />
       <workItem from="1693882540622" duration="671000" />
       <workItem from="1695013292597" duration="717000" />
+      <workItem from="1695198016799" duration="1315000" />
+      <workItem from="1695217372769" duration="618000" />
     </task>
     <servers />
   </component>

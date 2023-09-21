@@ -35,11 +35,10 @@ public class ChatRoomResponseDTO {
         private LocalDateTime createdAt;
 
         private LocalDateTime updateAt;
-
+        
     }
 
     public static ChatRoomResponseDTO.ChatRoomDTO from(ChatRoom chatRoom){
-
         return ChatRoomDTO
                 .builder()
                 .id(chatRoom.getId())
