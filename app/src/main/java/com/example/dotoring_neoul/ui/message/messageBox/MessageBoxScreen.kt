@@ -7,6 +7,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -18,6 +19,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Divider
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +27,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -44,6 +47,7 @@ import com.example.dotoring_neoul.navigation.MessageDetailScreen
 import com.example.dotoring_neoul.ui.theme.DotoringTheme
 import com.example.dotoring_neoul.ui.theme.Gray
 import com.example.dotoring_neoul.ui.theme.Navy
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 /**
  * 쪽지함 리스트 LazyColumn으로 리스트 하나씩 제공
@@ -63,20 +67,36 @@ fun MessageBoxScreen(messageBoxViewModel: MessageBoxViewModel = viewModel(), nav
     Column(
         modifier = Modifier
             .background(Color.White)
-            .padding(horizontal = 30.dp, vertical = 50.dp),
-        horizontalAlignment = Alignment.Start
+            .padding(horizontal = 20.dp, vertical = 30.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("  쪽지함",  fontWeight = FontWeight.ExtraBold, fontSize = 30.sp,color= colorResource(id= R.color.black), modifier = Modifier )
-        Spacer(modifier = Modifier.size(40.dp))
+        Text("채팅함", textAlign= TextAlign.Start,  fontWeight = FontWeight.ExtraBold, fontSize = 30.sp,color= colorResource(id= R.color.black), modifier = Modifier.fillMaxWidth() )
+        Spacer(modifier = Modifier.size(20.dp))
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
+            MessageListItem(messageBox = MessageBox(
+                    roomPK = 1,
+                memberPK = 1,
+                nickname = "닉네임",
+                lastLetter = "마지막 몇글자",
+                major = "전공",
+                updateAt = "2020."
+            ), navController = navController)
+            MessageListItem(messageBox = MessageBox(
+                roomPK = 1,
+                memberPK = 1,
+                nickname = "닉네임",
+                lastLetter = "마지막 몇글자",
+                major = "전공",
+                updateAt = "2020."
+            ), navController = navController)
 
-            LazyColumn(state = scrollState, ) {
-                this.items(messageList) {
-                        messageBox -> MessageListItem(messageBox=messageBox, navController = navController)
-                }
-            }
+//            LazyColumn(state = scrollState, ) {
+//                this.items(messageList) {
+//                        messageBox -> MessageListItem(messageBox=messageBox, navController = navController)
+//                }
+
 
         }
     }
@@ -88,7 +108,7 @@ fun MessageListItem(messageBoxViewModel: MessageBoxViewModel = viewModel(), mess
     val messageList = messageBoxUiState.messageList
 //        val messageList = source().loadRoom()
     Column(modifier = Modifier
-        .width(300.dp)
+        .width(350.dp)
         , horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -106,24 +126,34 @@ fun MessageListItem(messageBoxViewModel: MessageBoxViewModel = viewModel(), mess
                 },
 
 
-
             ) {
-            Box(
+            Row(
                 modifier = Modifier
-                    .width(260.dp)
+                    .fillMaxWidth()
                     .align(Alignment.CenterEnd)
 
             ) {
                 Surface(
+                    shape= CircleShape,
                     modifier = Modifier
-                        .fillMaxWidth(),
-                    shape= RoundedCornerShape(15.dp)
-                    , color = Gray
+                        .size(75.dp)
+                        .align(CenterVertically)
+
                 ) {
+                    Image(
+                        painter = painterResource(R.drawable.home_profile_sample),
+                        contentDescription = null,
+                        contentScale = ContentScale.FillBounds,
+                        modifier = Modifier
+                            .clip(CircleShape)
+                    )
+
+                }
+
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(start = 45.dp, top = 15.dp, bottom = 15.dp, end = 10.dp)
+                            .padding(start = 20.dp, top = 15.dp, bottom = 15.dp, end = 10.dp)
 
                     ) {
                         Text(
@@ -134,45 +164,21 @@ fun MessageListItem(messageBoxViewModel: MessageBoxViewModel = viewModel(), mess
                             color = Color.Gray, fontWeight = FontWeight.Normal
                         )
                         Text(text=messageBox.nickname, fontSize = 15.sp, color = Navy, fontWeight = FontWeight.ExtraBold)
-                        Text(text=messageBox.nickname, fontSize = 12.sp, fontWeight = FontWeight.Normal, color= Color.Black)
-                        Spacer(modifier = Modifier.size(12.dp))
+                        Text(text=messageBox.major, fontSize = 12.sp, fontWeight = FontWeight.Normal, color= Color.Black)
+                        Spacer(modifier = Modifier.size(10.dp))
                         Text(
                             text=messageBox.lastLetter,
                             fontSize = 12.sp,
                             modifier = Modifier.fillMaxWidth(),
-                            textAlign = TextAlign.End,
-                            fontWeight = FontWeight.Normal, color= Color.Black
+                            fontWeight = FontWeight.Normal, color= Color.Gray
                         )
-
-                    }
 
                 }
 
             }
-            Surface(
-                shape= CircleShape,
-                modifier = Modifier
-                    .size(70.dp)
-                    .align(Alignment.CenterStart)
-                    .border(
-                        width = 6.dp,
-                        color = colorResource(id = R.color.white),
-                        shape = CircleShape
-
-                    )
-
-            ) {
-                Image(
-                    painter = painterResource(R.drawable.home_profile_sample),
-                    contentDescription = null,
-                    contentScale = ContentScale.FillBounds,
-                    modifier = Modifier
-                        .clip(CircleShape)
-                )
-
-            }
 
         }
+        Divider(color = Color.LightGray)
     }
 }
 

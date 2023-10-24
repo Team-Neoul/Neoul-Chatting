@@ -98,6 +98,55 @@ class MessageDetailViewModel: ViewModel() {
 //
 //    }
 
+//        val url = "http://localhost:8080/"
+//        val url = "ws://localhost:8080/socket/websocket" // 소켓에 연결하는 엔드포인트가 /socket일때 다음과 같음
+//        val stompClient =  Stomp.over(Stomp.ConnectionProvider.OKHTTP, url)
+//
+//        fun runStomp(){
+//
+//            stompClient.topic("/topic/message/test(구독할 주소)").subscribe { topicMessage ->
+//                Log.i("message Recieve", topicMessage.payload)
+//            }
+//
+    //        헤더 넣어주는 코드 - connect할 때 설정한 코드 넣어주기
+//            val headerList = arrayListOf<StompHeader>()
+//            headerList.add(StompHeader("inviteCode","test0912"))
+//            headerList.add(StompHeader("username", text.value))
+//            headerList.add(StompHeader("positionType", "1"))
+//            stompClient.connect(headerList)
+//
+    //          그 다음 코드는 stompClient의 lifeCycle의 변경에 따라 로그를 찍는 코드
+//            stompClient.lifecycle().subscribe { lifecycleEvent ->
+//                when (lifecycleEvent.type) {
+//                    LifecycleEvent.Type.OPENED -> {
+//                        Log.i("OPEND", "!!")
+//                    }
+//                    LifecycleEvent.Type.CLOSED -> {
+//                        Log.i("CLOSED", "!!")
+//
+//                    }
+//                    LifecycleEvent.Type.ERROR -> {
+//                        Log.i("ERROR", "!!")
+//                        Log.e("CONNECT ERROR", lifecycleEvent.exception.toString())
+//                    }
+//                    else ->{
+//                        Log.i("ELSE", lifecycleEvent.message)
+//                    }
+//                }
+//            }
+//
+    //          보낼 메시지의 값에 맞춰서 보낼 주소에 넣어주기
+//            val data = JSONObject()
+//            data.put("userKey", text.value)
+//            data.put("positionType", "1")
+//            data.put("content", "test")
+//            data.put("messageType", "CHAT")
+//            data.put("destRoomCode", "test0912")
+//
+//            stompClient.send("/stream/chat/send", data.toString()).subscribe()
+//        }
+//    }
+
 
     /**
      * 쪽지 상세 렌더링 기능 구현

@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,8 +12,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -27,6 +30,7 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.rememberBackdropScaffoldState
@@ -48,6 +52,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -56,11 +61,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.dotoring.R
+import com.example.dotoring_neoul.ui.message.messageBox.MessageBox
+import com.example.dotoring_neoul.ui.message.messageBox.MessageListItem
 import com.example.dotoring_neoul.ui.theme.DotoringTheme
 import com.example.dotoring_neoul.ui.theme.Gray
 import com.example.dotoring_neoul.ui.theme.Green
 import com.example.dotoring_neoul.ui.theme.Navy
 import kotlinx.coroutines.launch
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 
 /**
@@ -85,6 +93,7 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
         scaffoldState = scaffoldState,
         backLayerBackgroundColor = Color.White,
         peekHeight = 200.dp,
+        headerHeight = 0.dp,
         modifier = Modifier,
         appBar = {},
         backLayerContent = {
@@ -92,7 +101,7 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
                 Column(modifier = Modifier) {
                     Surface(
                         modifier = Modifier
-                            .height(120.dp)
+                            .height(80.dp)
                             .fillMaxWidth()
                             .shadow(
                                 elevation = 10.dp,
@@ -102,67 +111,194 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
                     ) {
                         Row(
                             modifier = Modifier
-                                .padding(25.dp)
+                                .padding(15.dp)
                         ) {
-                            Surface(
-                                shape = CircleShape,
-                                modifier = Modifier
-                                    .size(70.dp)
-                                    .border(
-                                        width = 5.dp,
-                                        color = colorResource(id = R.color.white),
-                                        shape = CircleShape
-
-
-                                    )
-                            ) {
-                                Image(
-                                    painter = painterResource(R.drawable.home_profile_sample),
-                                    contentDescription = null,
-                                    contentScale = ContentScale.Crop,
-                                    modifier = Modifier
-                                        .clip(CircleShape)
-                                )
+                            TextButton(onClick = { /*TODO*/ },
+                                modifier=Modifier.width(40.dp),) {
+                                Text(modifier = Modifier
+                                    .fillMaxSize()
+                                    .align(Alignment.Bottom), text = "〈", fontSize = 20.sp, color = Color.Gray)
 
                             }
                             Column(
-                                modifier = Modifier
-                                    .padding(15.dp)
+                                modifier = Modifier.align(Alignment.CenterVertically)
                             ) {
-                                Text(text = "sonny567")
-                                Text(text = "정보통신")
-
+                                Text(text = "닉네임", color= Navy, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+                                Text(text = "학과", color= Color.Gray)
                             }
                         }
-
                     }
 
                     Column(
                         Modifier
                             .background(Color.White)
-                            .padding(5.dp)) {
+                            .padding(horizontal = 20.dp, vertical = 7.dp)) {
                         val scrollState = rememberLazyListState()
-                        LazyColumn(state = scrollState) {
-                            this.items(chatlist) {
-                                    messageDetail ->
-                                if(messageDetail.writer){
-                                    MentoChatBox(messageDetail=messageDetail) }
-                                else{ MentiChatBox(messageDetail=messageDetail) }
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내     ㄴ마넝마니어마니어나미어ㅏㅁ니아ㅣㄴ언미암니용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용 \n 엥",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용 \n 내용내요아앙만어ㅣㅏㅁ어ㅣ마ㅓ이멍미ㅏㅇ미어ㅏㄴ어ㅣ",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentiChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용 \n 아아",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+                        MentoChatBox(messageDetail = MessageDetail(
+                            nickname = "닉네임",
+                            letterId = 1,
+                            content = "내용",
+                            writer = true,
+                            createdAt = "2020.02.10"
+                        ))
+//                        LazyColumn(state = scrollState) {
+//                            this.items(chatlist) {
+//                                    messageDetail ->
+//                                if(messageDetail.writer){
+//                                    MentoChatBox(messageDetail=messageDetail) }
+//                                else{ MentiChatBox(messageDetail=messageDetail) }
                                 //MentiChatBox("안녕! 나는 수미야\n하이\n ㅎㅎ")}
 
 
                                 //id가 멘토면 MentoChatBox, 멘티면 MentiChatBox로 만들어지게끔 구현
 
 
-                            }
-                        }
+//                            }
+//                        }
                     }
                 }
-                Box(
+                Surface(
                     modifier = Modifier
+                        .background(Color.White)
+                        .padding(bottom = 10.dp)
                         .align(Alignment.BottomEnd)
                 ) {
-                    MessageButton(scaffoldState)
+                    MessageField(value = messageDetailUiState.writeContent, onValueChange = {messageDetailViewModel.updateContent(it)}, textField = stringResource(id = R.string.message_textField), navController = navController, scaffoldState = BackdropScaffoldState(
+                        BackdropValue.Concealed)
+                    )
                 }
             }
 
@@ -179,7 +315,8 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
                     color = Color.Gray){}
                 Text(modifier = Modifier
                     .padding(top = 30.dp)
-                    .align(Alignment.TopCenter), color = Color.Gray, text = stringResource(id = R.string.message_info ), fontSize = 12.sp)
+                    .align(Alignment.TopCenter), color = Color.Gray,
+                    text = stringResource(id = R.string.message_info ), fontSize = 12.sp)
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -188,18 +325,22 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
                         .background(Color.White),
                     shape = RoundedCornerShape(35.dp),
                 ) {
-                    MessageField(value = messageDetailUiState.writeContent, onValueChange = {messageDetailViewModel.updateContent(it)}, textField = stringResource(id = R.string.message_textField), navController = navController, scaffoldState = BackdropScaffoldState(
-                        BackdropValue.Concealed)
-                    )
-                }
 
-
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                ) {
-                    MessageButton(scaffoldState)
                 }
+                MessageField(value = messageDetailUiState.writeContent,
+                    onValueChange = {messageDetailViewModel.updateContent(it)},
+                    textField = stringResource(id = R.string.message_textField),
+                    navController = navController,
+                    scaffoldState = BackdropScaffoldState(
+                    BackdropValue.Concealed)
+                )
+
+//                Box(
+//                    modifier = Modifier
+//                        .align(Alignment.BottomEnd)
+//                ) {
+//                    MessageButton(scaffoldState)
+//                }
             }
 
 
@@ -216,8 +357,12 @@ fun MessageDetailScreen(messageDetailViewModel: MessageDetailViewModel = viewMod
 fun MessageField(scaffoldState: BackdropScaffoldState, navController: NavHostController, value:String, onValueChange:(String)->Unit, textField: String, messageDetailViewModel: MessageDetailViewModel = viewModel()) {
     val scope = rememberCoroutineScope()
     val messageDetailUiState by messageDetailViewModel.uiState.collectAsState()
-    Column(modifier = Modifier
-        .background(color= Gray)) {
+
+    Surface(modifier = Modifier
+        .height(50.dp)
+        .padding(horizontal = 15.dp)
+        , shape = RoundedCornerShape(10.dp)
+    ) {
         val keyboardController = LocalSoftwareKeyboardController.current
 
         TextField(
@@ -238,25 +383,23 @@ fun MessageField(scaffoldState: BackdropScaffoldState, navController: NavHostCon
                 keyboardController?.hide()
             })
         )
-        Button(modifier = Modifier
-            .padding(10.dp)
-            .width(40.dp)
-            .height(40.dp)
-            .align(Alignment.End)
-            , shape = RoundedCornerShape(30.dp),
-            onClick = {
-                messageDetailViewModel.sendMessage(navController)
-
-                scope.launch { scaffoldState.reveal() }
-
-            }) {
-            Image(
-                painter = painterResource(R.drawable.send_active),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxSize()
-            )
+        Row( modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+            Button(modifier = Modifier
+                .padding(5.dp)
+                .width(45.dp)
+                .height(45.dp), shape = RoundedCornerShape(10.dp),
+                onClick = {
+                    messageDetailViewModel.sendMessage(navController)
+                    scope.launch { scaffoldState.reveal() }
+                }) {
+                Image(
+                    painter = painterResource(R.drawable.send_active),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxSize()
+                )
+            }
         }
 
     }
@@ -311,28 +454,46 @@ fun MessageButton(scaffoldState: BackdropScaffoldState) {
 fun MentiChatBox(messageDetailViewModel: MessageDetailViewModel = viewModel(), messageDetail: MessageDetail) {
     val messageDetailUiState by messageDetailViewModel.uiState.collectAsState()
 
-    Box(Modifier.padding(7.dp)){
+    Row(modifier= Modifier
+        .fillMaxWidth()
+        .padding(3.dp), horizontalArrangement = Arrangement.End){
+
+        Row(modifier = Modifier.wrapContentWidth().fillMaxWidth(0.8f), Arrangement.End) {
+            Column(modifier = Modifier.align(Alignment.Bottom)) {
+                if(true){
+                    Surface(modifier = Modifier
+                        .size(7.dp)
+                        .align(Alignment.End), color = Green, shape = RoundedCornerShape(5.dp)) {
+                    }}
+                Text(
+                    modifier = Modifier
+                        .padding(bottom = 5.dp),
+                    text = messageDetail.createdAt, fontSize = 10.sp, color = Color.Gray
+                )
+            }
+
+            Surface(
+                modifier = Modifier
+                    .align(Alignment.CenterVertically)
+                    .wrapContentWidth()
+                    .padding(start = 5.dp, bottom = 5.dp),
+                shape = RoundedCornerShape(10.dp),
+                color = Green
+            ) {
+                Text(
+                    modifier = Modifier.padding(10.dp).wrapContentWidth(),
+                    text = messageDetail.content,
+                    color = Color.Black
+                )
+            }
+
+        }
         Surface(modifier = Modifier
-            .fillMaxWidth(),
-            shape= RoundedCornerShape(35.dp),
-            color = Navy
+            .align(Alignment.CenterVertically)
+            .width(10.dp)
+            .height(5.dp), color = Green, shape = RoundedCornerShape(5.dp)
         ) {
-            Box() {
-                Text(modifier = Modifier.padding(start = 25.dp, top=7.dp, end=25.dp),text = messageDetail.nickname, color = Color.White, fontSize = 15.sp)
-                Text(modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(start = 25.dp, top = 15.dp, end = 25.dp),text = messageDetail.createdAt, color = Color.White, fontSize = 10.sp)
-
-            }
-            Surface(modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 35.dp)
-                .align(Alignment.BottomCenter),
-                shape= RoundedCornerShape(35.dp),
-                color = Gray) {
-                Text(modifier = Modifier.padding(20.dp), text=messageDetail.content, color= Color.Black)
-
-            }
+            
         }
     }
 }
@@ -345,27 +506,45 @@ fun MentiChatBox(messageDetailViewModel: MessageDetailViewModel = viewModel(), m
 fun MentoChatBox(messageDetailViewModel: MessageDetailViewModel = viewModel(), messageDetail: MessageDetail) {
     val messageDetailUiState by messageDetailViewModel.uiState.collectAsState()
 
-    Box(Modifier.padding(7.dp)){
-        Surface(modifier = Modifier
-            .fillMaxWidth(),
-            shape= RoundedCornerShape(35.dp),
-            color = Green
+    Row(Modifier, horizontalArrangement = Arrangement.Center) {
+        Image(
+            painter = painterResource(R.drawable.home_profile_sample),
+            contentDescription = null,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .padding(end = 5.dp)
+                .clip(CircleShape)
+                .size(45.dp),
+            alignment = Alignment.Center
+        )
+        Surface(
+            modifier = Modifier
+                .align(Alignment.CenterVertically)
+                .width(10.dp)
+                .height(5.dp), color = Gray, shape = RoundedCornerShape(5.dp)
         ) {
-            Box() {
-                Text(modifier = Modifier.padding(start = 25.dp, top=7.dp, end=25.dp),text = messageDetail.nickname, color = Color.White, fontSize = 15.sp)
-                Text(modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(start = 25.dp, top = 15.dp, end = 25.dp),text = messageDetail.createdAt, color = Color.White, fontSize = 10.sp)
-
+        }
+        Row(modifier = Modifier.wrapContentWidth().fillMaxWidth(0.8f)) {
+            Surface(
+                modifier = Modifier
+                    .align(Alignment.CenterVertically)
+                    .wrapContentWidth()
+                    .padding(end = 5.dp, bottom = 5.dp),
+                shape = RoundedCornerShape(10.dp),
+                color = Gray
+            ) {
+                Text(
+                    modifier = Modifier.padding(10.dp).wrapContentWidth(),
+                    text = messageDetail.content,
+                    color = Color.Black
+                )
             }
-            Surface(modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 35.dp)
-                .align(Alignment.BottomCenter),
-                shape= RoundedCornerShape(35.dp),
-                color = Gray) {
-                Text(modifier = Modifier.padding(20.dp), text=messageDetail.content, color= Color.Black)
-
+            Column(modifier = Modifier.align(Alignment.Bottom)) {
+                Text(
+                    modifier = Modifier
+                        .padding(bottom = 5.dp),
+                    text = messageDetail.createdAt, fontSize = 10.sp, color = Color.Gray
+                )
             }
         }
     }
