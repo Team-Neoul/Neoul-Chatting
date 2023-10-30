@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "737975902978",
+    "project_id": "dotoring-ff89e",
+    "storage_bucket": "dotoring-ff89e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737975902978:android:f711ece18b5761eb90d81b",
+        "android_client_info": {
+          "package_name": "com.example.dotoring_neoul"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9aLUv_27aRTY6xgMvvE9xQuMa1tJx-Mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

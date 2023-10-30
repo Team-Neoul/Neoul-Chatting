@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import com.example.dotoring_neoul.ui.util.EffectiveCheckButton
 import com.example.dotoring_neoul.ui.util.register.CommonTextField
 import java.util.regex.Pattern

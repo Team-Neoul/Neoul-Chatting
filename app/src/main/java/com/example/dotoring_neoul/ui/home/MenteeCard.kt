@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import com.example.dotoring_neoul.navigation.Graph
 import com.example.dotoring_neoul.ui.detail.MenteeDetail
 import com.example.dotoring_neoul.ui.detail.MentiDetailedViewModel

@@ -1,6 +1,6 @@
 package com.example.dotoring_neoul.navigation
 
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 

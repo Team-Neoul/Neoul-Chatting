@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 
 /**
  * 멘티 세부 정보 화면 Composable

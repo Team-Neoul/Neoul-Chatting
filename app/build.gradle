@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.dotoring'
+    namespace 'com.example.dotoring_neoul'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.dotoring"
+        applicationId "com.example.dotoring_neoul"
         minSdk 26
         targetSdk 33
         versionCode 1

@@ -25,7 +25,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import com.example.dotoring_neoul.ui.theme.DotoringTheme
 
 

@@ -60,7 +60,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import com.example.dotoring_neoul.ui.message.messageBox.MessageBox
 import com.example.dotoring_neoul.ui.message.messageBox.MessageListItem
 import com.example.dotoring_neoul.ui.theme.DotoringTheme
@@ -533,13 +533,14 @@ fun MentoChatBox(messageDetailViewModel: MessageDetailViewModel = viewModel(), m
                 shape = RoundedCornerShape(10.dp),
                 color = Gray
             ) {
+
                 Text(
                     modifier = Modifier.padding(10.dp).wrapContentWidth(),
                     text = messageDetail.content,
                     color = Color.Black
                 )
             }
-            Column(modifier = Modifier.align(Alignment.Bottom)) {
+            Column(modifier = Modifier.align(Alignment.Bottom), ) {
                 Text(
                     modifier = Modifier
                         .padding(bottom = 5.dp),

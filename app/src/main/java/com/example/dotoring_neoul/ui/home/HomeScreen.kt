@@ -52,7 +52,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 import com.example.dotoring_neoul.navigation.HomeNavGraph
 import com.example.dotoring_neoul.ui.theme.DotoringTheme
 import androidx.compose.runtime.getValue

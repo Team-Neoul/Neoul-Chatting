@@ -4,7 +4,7 @@ import androidx.compose.material.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.example.dotoring.R
+import com.example.dotoring_neoul.R
 
 // 나눔 스퀘어 폰트 패밀리 저장
 val NanumSquare = FontFamily(

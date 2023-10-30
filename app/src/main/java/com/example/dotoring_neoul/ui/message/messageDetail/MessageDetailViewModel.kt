@@ -98,12 +98,11 @@ class MessageDetailViewModel: ViewModel() {
 //
 //    }
 
-//        val url = "http://localhost:8080/"
+//        val url = "http://localhost:8080/ws"
 //        val url = "ws://localhost:8080/socket/websocket" // 소켓에 연결하는 엔드포인트가 /socket일때 다음과 같음
 //        val stompClient =  Stomp.over(Stomp.ConnectionProvider.OKHTTP, url)
 //
 //        fun runStomp(){
-//
 //            stompClient.topic("/topic/message/test(구독할 주소)").subscribe { topicMessage ->
 //                Log.i("message Recieve", topicMessage.payload)
 //            }
@@ -135,7 +134,7 @@ class MessageDetailViewModel: ViewModel() {
 //                }
 //            }
 //
-    //          보낼 메시지의 값에 맞춰서 보낼 주소에 넣어주기
+    // 보낼 메시지의 값에 맞춰서 보낼 주소에 넣어주기
 //            val data = JSONObject()
 //            data.put("userKey", text.value)
 //            data.put("positionType", "1")
@@ -143,7 +142,7 @@ class MessageDetailViewModel: ViewModel() {
 //            data.put("messageType", "CHAT")
 //            data.put("destRoomCode", "test0912")
 //
-//            stompClient.send("/stream/chat/send", data.toString()).subscribe()
+//            stompClient.send("/app/chat/message", data.toString()).subscribe()
 //        }
 //    }
 
